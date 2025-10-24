@@ -96,21 +96,18 @@ def calcular_superficie_hectareas(coords):
     print(centroid)
     return area_ha,centroid
 
-st.set_page_config(page_title="Conversor KMZ/KML a Excel", page_icon="📍",layout="wide")
+st.set_page_config(page_title="Conversor KMZ y KML a Excel", page_icon="📍",layout="wide")
 
-st.title("📍 Conversor de archivos KMZ / KML a Excel")
+st.title("📍 Conversor de archivos KMZ y KML a Excel")
 
 st.write("Subí uno o varios archivos KMZ o KML para convertirlos en una tabla con coordenadas, centroides y superficie.")
 st.write("No guardamos tus archivos en memoria, por lo que tu información está segura y no podremos recuperar nada una vez que cierres la sesión.")
-col1, col2 = st.columns([1, 1])  # podés ajustar la proporción
-with col1:
-    st.write("Por ayuda, opiniones y transformadores de cartas de porte a Excel, comunicate con Santiago Cirigliano al 11-4048-6131 o click en:")
-with col2:
-    st.link_button("💬 WhatsApp", "https://wa.me/541140486131")
+st.write("Por ayuda, opiniones y transformadores de Cartas de Porte a Excel, comunicate con Santiago Cirigliano al 11-4048-6131 o click en:")
+st.link_button("💬 WhatsApp", "https://wa.me/541140486131")
 
 # Cargar múltiples archivos
 uploaded_files = st.file_uploader(
-    "Seleccioná tus archivos kmz o kml. Puedes subir varios a la vez",
+    "Seleccioná tus archivos kmz o kml. Podés subir varios a la vez. No aceptamos carpetas ni .zip",
     type=["kmz", "kml"],
     accept_multiple_files=True
 )
@@ -159,7 +156,7 @@ if st.button("🚀 Transformar"):
                 file_name="resultados.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
-            if st.download_button==True:st.balloons()
+
         else:
             st.warning("No se generaron datos válidos.")
 
