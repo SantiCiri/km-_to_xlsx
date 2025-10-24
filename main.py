@@ -125,6 +125,7 @@ if st.button("🚀 Transformar"):
     if not uploaded_files:
         st.warning("Por favor, subí al menos un archivo antes de transformar.")
     else:
+        st.write("Este es el formato de Excel requerido por Visec para cargar tus polígonos. Cada polígono debe ingresarse una única vez en la plataforma, dentro del proceso denominado “Registro de UPs”. Además, deberás completar el resto de la planilla con información que no está contenida en los archivos KMZ que nos enviaste, a fin de completar correctamente el archivo denominado Template-UP-ORIGINAL-Sistema-VISEC-MRV.")
         df = pd.DataFrame(columns=["Archivo", "Polígono", "Punto Referencia", "Superficie"])
         errores = []
         
@@ -165,3 +166,4 @@ if st.button("🚀 Transformar"):
         # Mostrar archivos con errores
         if errores:
             st.error(f"⚠️ Archivos ignorados o con error:\n" + "\n".join(errores))
+
