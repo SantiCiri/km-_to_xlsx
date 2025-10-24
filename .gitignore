@@ -1,0 +1,67 @@
+#Archovos de pruebas
+Capa sin nombre.kml
+Capa sin nombre.kmz
+hectar.kmz
+main.ipynb
+
+# Entorno virtual
+.venv/
+venv/
+env/
+ENV/
+
+# Archivos de dependencias
+*.egg-info/
+*.egg
+*.eggs/
+dist/
+build/
+pip-wheel-metadata/
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de logs
+*.log
+
+# Archivos de configuración locales
+*.env
+.env
+.env.*
+
+# Archivos de notebooks
+.ipynb_checkpoints/
+
+# Archivos temporales o del sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Archivos de coverage y pruebas
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+htmlcov/
+.tox/
+.pytest_cache/
+
+# IDEs y editores
+.vscode/
+.idea/
+.spyproject/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos de configuración específicos
+*.cfg
+*.ini
+*.bak
+
+# Otros
+logs/
